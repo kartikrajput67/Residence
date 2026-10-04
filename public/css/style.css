@@ -1,0 +1,83 @@
+html,body{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+.container{
+    flex-grow: 1;
+}
+
+.plus-jakarta-sans-body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar{
+    height: 4rem;
+}
+
+/* Residence icon*/
+.fa-regular{
+    color: #be1414;
+    font-size: 2rem;
+}
+
+/*footer*/
+#f-info-socials a {
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.3rem;
+}
+.f-info-links a {
+    text-decoration: none;
+     color: inherit;
+}
+.f-info {
+    
+    min-height: 6rem;
+    padding: 1rem;
+    background-color: #eff2f5e0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+/* cards */
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem !important;
+    
+}
+.card-img-top{
+    border-radius: 5% !important;
+    width: 100% !important;
+    object-fit: cover !important;
+}
+.index-card-body {
+    padding: 0 !important;
+}
+
+.card-body-main-div{
+    margin: 2rem;
+}
+show-listing-card{
+    height: 100%;
+    border: none !important;
+    margin-bottom: 2rem !important;
+}
+/* Show Page */
+.show-listing-card-img{
+    margin-top: 0.5rem;
+    height: 50vh;
+    border-radius: 2rem !important;
+    margin-bottom: 2rem !important;
+}
+ 
