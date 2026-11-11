@@ -2,7 +2,7 @@ const Joi = require("joi");
 
 module.exports.listingSchema = Joi.object({
     listing: Joi.object({
-        title: Joi.string().alphanum().required(),
+        title: Joi.string().trim().required(),
         description: Joi.string().required(),
         image: Joi.object({
             url: Joi.string().allow("", null),

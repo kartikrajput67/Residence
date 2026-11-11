@@ -1,27 +1,49 @@
 <% layout('/layouts/boilerplate') -%>
 
-    <body>
-        <h3>All Listings</h3>
-
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-        <% for(let listing of allListings) { %>
-        
-            <div class="listing-card col">
-                <div> 
-                    <a href="/listings/<%= listing._id %>">
-                        <img style="height: 20rem;" src="<%= listing.image.url %>" class="card-img-top index_img" alt="listing_image">
-                    </a>
-                </div>
-                
-                <div class="index-card-body">
-                    <p class="card-text">
-                        <b><%= listing.title %></b> <br>
-                        &#8377; <%= listing.price.toLocaleString("en-IN") %>/ night 
-                    </p>
-                </div>
-            </div>
-        </a>
-    <% } %>
+<div class="listings-header">
+    <div>
+        <h2>Explore stays</h2>
+        <p>Find your perfect place for your next getaway.</p>
     </div>
+</div>
 
-    </body>
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4">
+
+    <% for (let listing of allListings) { %>
+
+        <div class="col">
+            <div class="listing-card">
+
+                <!-- Listing image -->
+                <a href="/listings/<%= listing._id %>" class="listing-image-link">
+                    <img
+                        src="<%= listing.image.url %>"
+                        class="listing-image"
+                        alt="<%= listing.title %>"
+                        loading="lazy"
+                    >
+                </a>
+
+                <!-- Listing details -->
+                <div class="listing-details">
+
+                    <a href="/listings/<%= listing._id %>"
+                        class="listing-title">
+                        <%= listing.title %>
+                    </a>
+
+                    <p class="listing-price">
+                        <strong>
+                            ₹ <%= listing.price.toLocaleString("en-IN") %>
+                        </strong>
+                        <span>/ night</span>
+                    </p>
+
+                </div>
+
+            </div>
+        </div>
+
+    <% } %>
+
+</div>
